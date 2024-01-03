@@ -142,7 +142,7 @@ int listenToSocket(int listenfd, int makeChild)
             continue;
         }
 
-        logIT(LOG_NOTICE, "Client connected %s:%s (FD:%d)", clienthost, clientservice, connfd);
+        logIT(LOG_INFO, "Client connected %s:%s (FD:%d)", clienthost, clientservice, connfd);
         if (! makeChild) {
             return connfd;
         } else if ( (childpid = fork()) == 0) {
